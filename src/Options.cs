@@ -13,7 +13,6 @@ namespace TrailingWhitespace
             IgnorePatterns = @"\node_modules\, \bower_components\, \typings\, \lib\, \Symbols\, .min., .md, .markdown, .designer.";
             IgnoreMiscFiles = false;
             IgnoreVerbatimString = true;
-            TrimOnlyModifiedLines = false;
         }
 
         [Category("General")]
@@ -39,12 +38,6 @@ namespace TrailingWhitespace
         [Description("When true, whitespace in verbatim strings will not be removed.")]
         [DefaultValue(true)]
         public bool IgnoreVerbatimString { get; set; }
-
-        [Category("General")]
-        [DisplayName("Trim only modified lines")]
-        [Description("When true, whitespace will only be trimmed from lines that have been added or modified since the file was opened.")]
-        [DefaultValue(false)]
-        public bool TrimOnlyModifiedLines { get; set; }
 
         private static string[] _cachedPatterns;
         private static string _lastPatternString;
